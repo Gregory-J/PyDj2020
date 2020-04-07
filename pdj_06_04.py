@@ -5,7 +5,10 @@ def main():
             getFile()
     else:
         getFile()
-    graph('covid.csv')
+    if input("Do you want to see cases for specific country? ").lower()=="yes":
+        graph('covid.csv',input("Enter the name of the country: ").capitalize())
+    else:
+        graph('covid.csv')
 
 
 def getFile():
